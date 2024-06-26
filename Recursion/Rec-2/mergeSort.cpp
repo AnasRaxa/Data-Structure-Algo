@@ -61,11 +61,7 @@ void mergSort(int* arr,int start, int end){
     mergSort(arr,start,mid);
     mergSort(arr,mid+1,end);
 
-
-
     merge(arr,start,mid,end);
-
-
 
 }
 
