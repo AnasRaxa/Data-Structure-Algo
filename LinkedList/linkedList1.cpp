@@ -18,6 +18,22 @@ class LinkedList{
 
     public:
 
+        ~LinkedList(){
+
+            Node* temp = NULL;
+
+            while(head){
+
+                temp = head;
+
+                head = head->next;
+
+                delete temp;
+
+            }
+
+        }
+
         Node* head = NULL;
 
         void add(int n){
@@ -54,8 +70,6 @@ class LinkedList{
 
             }
             
-
-
         }
 
 
