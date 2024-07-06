@@ -29,7 +29,7 @@ class Solution
         Node* fast = head;
         
         
-        while(head2!=NULL && head2->next!=NULL){
+        while(fast!=NULL && fast->next!=NULL){
             
             slow = slow->next;
             fast = fast->next->next;

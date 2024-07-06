@@ -183,6 +183,29 @@ class LinkedList{
 
 
     }
+    void reverse3(){
+
+        
+        Node* r = NULL;
+        Node* q = NULL;
+        Node* p = head;
+
+        while(p){
+
+             r = q;
+             q = p;
+             p = p->next;
+
+            q->next = r;
+
+
+        }
+
+        
+        head = q;
+
+
+    }
 
 
 

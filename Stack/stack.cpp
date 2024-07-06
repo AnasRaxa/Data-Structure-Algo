@@ -42,7 +42,6 @@ class Stack{
             }
             else{
                 top--;
-                if(top == -1);
                 cout<<"Deleted "<<arr[top+1]<< " from the stack\n";
             }
 
