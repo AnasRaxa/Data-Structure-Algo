@@ -244,6 +244,7 @@ class tree{
         }
         void iterativeIn(Node* p){
             stack<Node*>stk;
+            
 
             while(p!=NULL || !stk.empty()){
 
