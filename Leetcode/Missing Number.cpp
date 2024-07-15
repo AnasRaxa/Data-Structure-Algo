@@ -19,6 +19,60 @@ public:
 
 
 
+
+
+
+
+
+
+
+
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+
+        int n = nums.size();
+        
+        sort(nums.begin(),nums.end());
+
+        int result = n;
+
+
+        int start = 0;
+        int end = n-1;
+        int mid;
+
+
+        while(start<=end){
+
+            mid = start + (end - start)/2;
+
+            if(nums[mid] > mid){
+                result = mid;
+                 end = mid -1;
+
+            }
+            else{
+
+                start = mid + 1;
+            }
+
+
+        }
+
+    return result;
+
+        
+    }
+}; 
+
+
+
+
+
+
+
+
 // sol 2
 
 class Solution {

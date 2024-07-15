@@ -10,9 +10,46 @@
 
 class Solution {
 public:
-    vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
+    vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
+        
 
 
+
+
+        unordered_map<int,int>mp;
+        set<int>st;
+
+        for(auto a:nums1){
+            mp[a]++;
+        }
+        for(auto a:nums2){
+            if(mp.count(a)){
+                if(mp[a]>0){
+                    st.insert(a);
+                    mp[a]--;
+                }
+            }
+        }
+
+
+        vector<int>ans(begin(st),end(st));
+
+        return ans;
+        
+  
+        
+    
+
+    }
+};
+
+
+
+
+
+class Solution {
+public:
+    vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
 
         unordered_map<int,int>mp;
         vector<int>ans;
@@ -22,22 +59,15 @@ public:
         }
         for(auto a:nums2){
             if(mp.count(a)){
-                if(mp[a]>0){
-                    ans.push_back(a);
-                    mp[a]--;
-                }
+                ans.push_back(a);
+                mp.erase(a);
             }
         }
 
         return ans;
         
-  
-        
     }
 };
-
-
-
 
 
 
